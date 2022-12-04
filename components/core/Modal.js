@@ -63,7 +63,7 @@ export default function Modal({
                 >
                   <div id="course-wrapper" className="w-full mt-5">
                     <form>
-                      {!approvalCheck ? (
+                      {approvalCheck ? (
                         <>
                           <div className="mb-6">
                             <label
