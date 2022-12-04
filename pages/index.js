@@ -310,9 +310,11 @@ export default function Home() {
                     <div className="flex items-center px-5 py-3">
                       <div className="w-1/2 flex items-center">
                         <div className="w-10 -ml-2">
-                          {item.contract_ticker_symbol != "MET" && (
-                            <img src={item.logo_url} alt="logo_url" />
-                          )}
+                          {item.contract_ticker_symbol != "MET" &&
+                            item.contract_ticker_symbol != "WETH" &&
+                            item.contract_ticker_symbol != "CKIE" && (
+                              <img src={item.logo_url} alt="logo_url" />
+                            )}
                         </div>
                         <div className="ml-1">{item.contract_name}</div>
                       </div>
