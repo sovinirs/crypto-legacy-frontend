@@ -197,7 +197,7 @@ export default function Home() {
       var total = 0;
       balancesData.items.forEach((item) => {
         var balanceOfItem = parseInt(
-          item.balance.substring(0, item.contract_decimals)
+          ethers.utils.formatEther(item.balance, item.contract_decimals)
         );
         total += balanceOfItem;
       });
